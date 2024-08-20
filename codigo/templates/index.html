@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <title>Lista de Escritórios</title>
+</head>
+<body>
+    <h1>Lista de Escritórios</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Número de Funcionários</th>
+            <th>Renda Mensal</th>
+            <th>Gerente</th>
+            <th>Localização</th>
+        </tr>
+        {% for escritorio in escritorios %}
+        <tr>
+            <td>{{ escritorio['id_escritorio'] }}</td>
+            <td>{{ escritorio['num_funcionarios'] }}</td>
+            <td>{{ escritorio['renda_mensal'] }}</td>
+            <td>{{ escritorio['gerente'] }}</td>
+            <td>{{ escritorio['localizacao'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/escritorios/add">Adicionar Novo Escritório</a>
+</body>
+</html>
